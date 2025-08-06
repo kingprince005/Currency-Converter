@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="nav-title">
+          <i class="fas fa-exchange-alt"></i>
+          Currency Converter
+        </h1>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            title="Toggle Dark Mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            class="favorites-btn"
+            id="favoritesBtn"
+            title="Favorite Conversions"
+          >
+            <i class="fas fa-star"></i>
+          </button>
+          <button class="chat-btn" id="chatBtn">
+            <i class="fas fa-comments"></i>
+            Chat With Converter
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Market Overview -->
+      <section class="market-overview animate__animated animate__fadeInUp">
+        <div class="market-stats">
+          <div class="stat-card">
+            <i class="fas fa-chart-line"></i>
+            <div class="stat-info">
+              <span class="stat-value" id="marketTrend">+2.3%</span>
+              <span class="stat-label">Market Trend</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <div class="stat-info">
+              <span class="stat-value" id="lastUpdate">Live</span>
+              <span class="stat-label">Last Update</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-globe"></i>
+            <div class="stat-info">
+              <span class="stat-value">170+</span>
+              <span class="stat-label">Currencies</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Conversions -->
+      <section
+        class="popular-section animate__animated animate__fadeInUp animate__delay-1s"
+      >
+        <div class="section-header">
+          <h2>
+            <i class="fas fa-fire"></i>
+            Trending Conversions
+          </h2>
+          <button class="refresh-btn" id="refreshRates" title="Refresh Rates">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+        <div class="popular-grid" id="popularGrid">
+          <!-- Popular conversions will be loaded here -->
+        </div>
+      </section>
+
+      <!-- Currency Converter -->
+      <section
+        class="converter-section animate__animated animate__fadeInUp animate__delay-2s"
+      >
+        <div class="converter-card">
+          <div class="converter-header">
+            <h2>
+              <i class="fas fa-exchange-alt"></i>
+              Currency Converter
+            </h2>
+            <div class="converter-actions">
+              <button
+                class="save-favorite"
+                id="saveFavorite"
+                title="Save as Favorite"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+              <button
+                class="history-btn"
+                id="historyBtn"
+                title="Conversion History"
+              >
+                <i class="fas fa-history"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Amount Input -->
+          <div class="input-group">
+            <label for="amount">
+              <i class="fas fa-dollar-sign"></i>
+              Amount
+            </label>
+            <div class="amount-input-wrapper">
+              <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                min="0"
+                step="0.01"
+              />
+              <div class="quick-amounts">
+                <button class="quick-amount" data-amount="100">100</button>
+                <button class="quick-amount" data-amount="500">500</button>
+                <button class="quick-amount" data-amount="1000">1K</button>
+                <button class="quick-amount" data-amount="5000">5K</button>
+              </div>
+            </div>
+            <div class="error-message" id="amountError"></div>
+          </div>
+
+          <!-- Currency Selection -->
+          <div class="currency-row">
+            <div class="currency-group">
+              <label for="fromCurrency">From</label>
+              <div class="select-wrapper">
+                <select id="fromCurrency">
+                  <option value="">Select currency...</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="currency-info" id="fromCurrencyInfo"></div>
+            </div>
+
+            <button class="swap-btn" id="swapBtn" title="Swap currencies">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+
+            <div class="currency-group">
+              <label for="toCurrency">To</label>
+              <div class="select-wrapper">
+                <select id="toCurrency">
+                  <option value="">Select currency...</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="currency-info" id="toCurrencyInfo"></div>
+            </div>
+          </div>
+
+          <!-- Convert Button -->
+          <button class="convert-btn" id="convertBtn">
+            <i class="fas fa-calculator"></i>
+            Convert
+          </button>
+
+          <!-- Result -->
+          <div class="result-section" id="resultSection">
+            <div class="result-card">
+              <div class="result-header">
+                <div class="result-amount" id="resultAmount"></div>
+                <div class="result-actions">
+                  <button
+                    class="copy-result"
+                    id="copyResult"
+                    title="Copy Result"
+                  >
+                    <i class="fas fa-copy"></i>
+                  </button>
+                  <button
+                    class="share-result"
+                    id="shareResult"
+                    title="Share Result"
+                  >
+                    <i class="fas fa-share-alt"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="result-details" id="resultDetails"></div>
+              <div class="exchange-rate" id="exchangeRate"></div>
+              <div class="rate-change" id="rateChange"></div>
+              <div class="conversion-chart" id="conversionChart">
+                <canvas id="chartCanvas" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loading Spinner -->
+          <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>Converting...</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Chat Modal -->
+    <div class="chat-modal" id="chatModal">
+      <div class="chat-container">
+        <div class="chat-header">
+          <h3>
+            <i class="fas fa-robot"></i>
+            Chat With Converter
+          </h3>
+          <button class="close-btn" id="closeChatBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot-message">
+            <div class="message-content">
+              <i class="fas fa-robot"></i>
+              <span
+                >Hi! I can help you convert currencies. Try asking me something
+                like "Convert 500 dollars to rupees" or "What's 100 euros in
+                yen?"</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your conversion request..."
+          />
+          <button id="sendChatBtn">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="favorites-modal" id="favoritesModal">
+      <div class="favorites-container">
+        <div class="favorites-header">
+          <h3>
+            <i class="fas fa-star"></i>
+            Favorite Conversions
+          </h3>
+          <button class="close-btn" id="closeFavoritesBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="favorites-content" id="favoritesContent">
+          <div class="empty-favorites">
+            <i class="fas fa-heart"></i>
+            <p>No favorite conversions yet</p>
+            <small
+              >Save your frequently used conversions for quick access</small
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Modal -->
+    <div class="history-modal" id="historyModal">
+      <div class="history-container">
+        <div class="history-header">
+          <h3>
+            <i class="fas fa-history"></i>
+            Conversion History
+          </h3>
+          <div class="history-actions">
+            <button class="clear-history" id="clearHistory">
+              <i class="fas fa-trash"></i>
+              Clear All
+            </button>
+            <button class="close-btn" id="closeHistoryBtn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="history-content" id="historyContent">
+          <div class="empty-history">
+            <i class="fas fa-clock"></i>
+            <p>No conversion history yet</p>
+            <small>Your recent conversions will appear here</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <i class="toast-icon"></i>
+        <span class="toast-message"></span>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
