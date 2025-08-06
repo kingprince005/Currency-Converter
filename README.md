@@ -2,8 +2,8 @@
 
 > A sleek, modern currency converter with AI-powered chat and real-time exchange rates
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://your-username.github.io/ai-currency-converter)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/your-username/ai-currency-converter)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://kingprince005.github.io/Currency-Converter)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/kingprince005/Currency-Converter)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -89,19 +89,19 @@ Just type naturally:
 ### Option 1: Direct Download
 ```bash
 # Download and extract
-curl -L https://github.com/your-username/ai-currency-converter/archive/main.zip -o converter.zip
+curl -L https://github.com/kingprince005/Currency-Converter/archive/main.zip -o converter.zip
 unzip converter.zip
-cd ai-currency-converter-main
+cd Currency-Converter-main
 ```
 
 ### Option 2: Git Clone
 ```bash
-git clone https://github.com/your-username/ai-currency-converter.git
-cd ai-currency-converter
+git clone https://github.com/kingprince005/Currency-Converter.git
+cd Currency-Converter
 ```
 
 ### Option 3: One-Click Deploy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-username/ai-currency-converter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kingprince005/Currency-Converter)
 
 ### Run Locally
 ```bash
@@ -182,13 +182,13 @@ npx serve .
 Love this project? Here's how you can help:
 
 ### 🐛 **Found a Bug?**
-[Open an issue](https://github.com/your-username/ai-currency-converter/issues/new?template=bug_report.md) with:
+[Open an issue](https://github.com/kingprince005/Currency-Converter/issues/new?template=bug_report.md) with:
 - Steps to reproduce
 - Expected vs actual behavior
 - Browser/device info
 
 ### 💡 **Have an Idea?**
-[Suggest a feature](https://github.com/your-username/ai-currency-converter/issues/new?template=feature_request.md):
+[Suggest a feature](https://github.com/kingprince005/Currency-Converter/issues/new?template=feature_request.md):
 - Currency alerts
 - Historical graphs
 - Offline mode
@@ -240,14 +240,14 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📊 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/your-username/ai-currency-converter?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/ai-currency-converter?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/your-username/ai-currency-converter?style=social)
+![GitHub stars](https://img.shields.io/github/stars/kingprince005/Currency-Converter?style=social)
+![GitHub forks](https://img.shields.io/github/forks/kingprince005/Currency-Converter?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/kingprince005/Currency-Converter?style=social)
 
-![GitHub issues](https://img.shields.io/github/issues/your-username/ai-currency-converter)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/your-username/ai-currency-converter)
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/ai-currency-converter)
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/ai-currency-converter)
+![GitHub issues](https://img.shields.io/github/issues/kingprince005/Currency-Converter)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/kingprince005/Currency-Converter)
+![GitHub last commit](https://img.shields.io/github/last-commit/kingprince005/Currency-Converter)
+![GitHub repo size](https://img.shields.io/github/repo-size/kingprince005/Currency-Converter)
 
 ---
 
@@ -257,8 +257,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Give it a star ⭐ and share it with friends!**
 
-**Made with ❤️ by [Your Name](https://github.com/your-username)**
+**Made with ❤️ by [kingprince005](https://github.com/kingprince005)**
 
-[🐦 Twitter](https://twitter.com/your-username) • [💼 LinkedIn](https://linkedin.com/in/your-username) • [🌐 Portfolio](https://your-website.com)
+[�  GitHub](https://github.com/kingprince005) • [� ELmail](mailto:princekrnbt2004@gmail.com)
 
 </div>
